@@ -1,0 +1,24 @@
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import SoftBackdrop from './components/SoftBackdrop';
+import Footer from './components/Footer';
+import LenisScroll from './components/lenis';
+import { Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+
+function App() {
+	return (
+		<>
+			<SoftBackdrop />
+			<LenisScroll />
+			<Navbar />
+			{/* <Home /> */}
+			<Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+			<Footer /> 
+		</>
+	);
+}
+export default App;
