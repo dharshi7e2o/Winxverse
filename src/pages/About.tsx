@@ -1,9 +1,14 @@
+import AboutContent from "../components/AboutContent";
+import AboutHeader from "../components/AboutHeader";
+import WhyChooseUs from "../components/WhyChooseUs";
+
 const About = () => {
   return (
-    <div>
-      <h1>About Page</h1>
-      <p>This is the About page.</p>
-    </div>
+    <>
+      <AboutHeader />
+      <AboutContent />
+      <WhyChooseUs />
+    </>
   );
 };
 
