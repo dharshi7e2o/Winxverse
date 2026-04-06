@@ -4,7 +4,7 @@ export default function AboutContent() {
     <section className="bg-transparent py-20 px-6 md:px-16">
       
       {/* Top Small Title */}
-      <div className="text-center mb-14">
+      <div className="text-center">
         <p className="text-sm text-blue-600 font-medium flex items-center justify-center gap-2">
           <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
           About Us
@@ -16,7 +16,7 @@ export default function AboutContent() {
       </div>
 
       {/* Card Section */}
-      <div className="max-w-6xl mx-auto bg-transparent border border-white rounded-2xl shadow-sm p-8 md:p-14 flex flex-col md:flex-row items-center gap-10">
+      <div className="max-w-6xl mx-auto bg-transparent rounded-2xl shadow-sm flex flex-col md:flex-row items-center gap-10">
         
         {/* Left Content */}
         <div className="flex-1">

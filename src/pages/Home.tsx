@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Career from "../components/career";
+import Career from "../components/Founder";
 import Features from "../components/Features";
 import Pricing from "../components/Pricing";
 import Faq from "../components/Faq";
@@ -11,7 +11,7 @@ export default function Home() {
             <Hero />
             <Career />
             <Features />
-            <Pricing />
+            {/* <Pricing /> */}
             <Faq />
             <CTA />
         </>

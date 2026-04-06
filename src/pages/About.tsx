@@ -1,6 +1,7 @@
-import AboutContent from "../components/AboutContent";
-import AboutHeader from "../components/AboutHeader";
-import WhyChooseUs from "../components/WhyChooseUs";
+import AboutContent from "../components/AboutUs/AboutContent";
+import AboutFounder from "../components/AboutUs/AboutFounder";
+import AboutHeader from "../components/AboutUs/AboutHeader";
+import WhyChooseUs from "../components/AboutUs/WhyChooseUs";
 
 const About = () => {
   return (
@@ -8,6 +9,7 @@ const About = () => {
       <AboutHeader />
       <AboutContent />
       <WhyChooseUs />
+      <AboutFounder />
     </>
   );
 };
