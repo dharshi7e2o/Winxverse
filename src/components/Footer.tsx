@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-white/10">
                     <div>
-                        <img src='/logo_with_name.png' alt="logo" className="h-24" />
+                        <img src='/images/logo_with_name.png' alt="logo" className="h-24" />
                         <p className="max-w-[410px] mt-6 text-sm leading-relaxed">
                             We are a digital agency focused on strategy, design and development—helping brands build meaningful digital experiences and grow sustainably.
                         </p>
@@ -44,16 +44,29 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <p className="py-4 text-center text-sm text-gray-400">
-                    © {new Date().getFullYear()} {' '}
-                    <a href="https://prebuiltui.com/tailwind-templates?ref=pixel-forge" target='_blank'>
-                        PrebuiltUI
-                    </a> • Distributed by {' '}
-                    <a href="https://themewagon.com" target='_blank'>
-                        ThemeWagon
-                    </a>
-                    . All rights reserved.
-                </p>
+                <div className="py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 gap-2">
+
+  {/* LEFT */}
+  <p className="text-left">
+    © {new Date().getFullYear()}{" "}
+    {/* <a href="https://prebuiltui.com/tailwind-templates?ref=pixel-forge" target="_blank">
+      PrebuiltUI
+    </a>{" "} */}
+    • Distributed by{" "}
+    <a href="https://themewagon.com" target="_blank">
+      Winxverse
+    </a>
+    . All rights reserved.
+  </p>
+
+  {/* RIGHT */}
+  <p className="flex items-center gap-1">
+    Made
+    <span className="text-red-500 text-base">❤️</span>
+    by <span className="font-semibold text-white">WXV</span>
+  </p>
+
+</div>
             </div>
         </motion.footer>
     );

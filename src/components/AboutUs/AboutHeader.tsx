@@ -2,9 +2,9 @@
 export default function AboutHeader() {
   return (
     <section
-      className="relative w-full h-[300px] flex items-center justify-center bg-cover bg-center"
+      className="relative w-full h-[500px] flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/logo.png')", 
+        backgroundImage: "url('/images/aboutus.jpg')", 
       }}
     >
       {/* Dark Overlay */}

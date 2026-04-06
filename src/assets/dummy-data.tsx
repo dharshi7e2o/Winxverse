@@ -15,7 +15,22 @@ export const featuresData = [
         icon: <VideoIcon className="w-6 h-6" />,
         title: 'Launch & Growth',
         desc: 'We launch, optimize and continuously improve to drive measurable business growth.'
-    }
+    },
+    {
+        icon: <UploadIcon className="w-6 h-6" />,
+        title: 'Discovery & Planning',
+        desc: 'We understand your goals, audience and challenges to craft a clear, actionable strategy.'
+    },
+    {
+        icon: <ZapIcon className="w-6 h-6" />,
+        title: 'Design & Development',
+        desc: 'High-quality design and scalable development focused on performance and usability.'
+    },
+    {
+        icon: <VideoIcon className="w-6 h-6" />,
+        title: 'Launch & Growth',
+        desc: 'We launch, optimize and continuously improve to drive measurable business growth.'
+    },
 ];
 
 export const plansData = [

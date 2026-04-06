@@ -1,6 +1,7 @@
 import { ArrowRightIcon, PlayIcon, ZapIcon, CheckIcon } from 'lucide-react';
 import { PrimaryButton, GhostButton } from './Buttons';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
 
@@ -10,8 +11,11 @@ export default function Hero() {
         'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
     ];
 
-    const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
-
+   const sliderImages = [
+  'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop'
+];
     const galleryStripImages = [
         'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
         'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=100',
@@ -25,6 +29,16 @@ export default function Hero() {
         'Global teams',
         'Creative brands'
     ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
+  }, 3000); // change every 3 sec
+
+  return () => clearInterval(interval);
+}, []);
 
     return (
         <>
@@ -96,7 +110,7 @@ export default function Hero() {
                                 </GhostButton>
                             </motion.div>
 
-                            <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
+                            {/* <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
                                 initial={{ y: 60, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
@@ -123,7 +137,7 @@ export default function Hero() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </motion.div> */}
                         </div>
 
                         {/* Right: modern mockup card */}
@@ -135,11 +149,16 @@ export default function Hero() {
                         >
                             <motion.div className="rounded-3xl overflow-hidden border border-white/6 shadow-2xl bg-linear-to-b from-black/50 to-transparent">
                                 <div className="relative aspect-16/10 bg-gray-900">
-                                    <img
-                                        src={mainImageUrl}
-                                        alt="agency-work-preview"
-                                        className="w-full h-full object-cover object-center"
-                                    />
+                                    <motion.img
+  key={currentIndex}
+  src={sliderImages[currentIndex]}
+  alt="agency-work-preview"
+  className="w-full h-full object-cover object-center"
+  initial={{ opacity: 0, scale: 1.05 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.6 }}
+/>
 
                                     <div className="absolute left-4 top-4 px-3 py-1 rounded-full bg-black/15 backdrop-blur-sm text-xs">
                                         Branding • Web • Growth
