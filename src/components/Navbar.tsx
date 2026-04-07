@@ -22,7 +22,7 @@ export default function Navbar() {
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
         >
-            <div className='max-w-6xl mx-auto flex items-center justify-between bg-black/50 backdrop-blur-md border border-white/4 rounded-2xl p-3'>
+            <div className='max-w-7xl mx-auto flex items-center justify-between bg-black/50 backdrop-blur-md border border-white/4 rounded-2xl p-3'>
                 <a href='/#'>
                     <img src='/logo.png' alt="logo" className="h-10" />
                 </a>
@@ -53,9 +53,9 @@ export default function Navbar() {
                     </a>
                 ))}
 
-                <button onClick={() => setIsOpen(false)} className='font-medium text-gray-300 hover:text-white transition'>
+                {/* <button onClick={() => setIsOpen(false)} className='font-medium text-gray-300 hover:text-white transition'>
                     Sign in
-                </button>
+                </button> */}
                 <PrimaryButton onClick={() => setIsOpen(false)}>Get Started</PrimaryButton>
 
                 <button
